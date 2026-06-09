@@ -10,33 +10,80 @@
     />
   </head>
   <body class="d-flex flex-column min-vh-100">
-    <header class="bg-primary text-white py-3">
-      <!-- Logo a sinistra, link nav a destra. Usa container + d-flex + justify-content-between -->
-      <div class="container d-flex justify-content-between align-items-center">
-        <h1 class="fs-3 m-0">EpiShop</h1>
-        <nav>
-          <a class="text-white text-decoration-none mx-2">Prodotti</a>
-          <a class="text-white text-decoration-none mx-2">Offerte</a>
-          <a class="text-white text-decoration-none mx-2">Contatti</a>
-          <a class="text-white text-decoration-none mx-2 d-none d-lg-inline"
-            >Account</a
-          >
-        </nav>
-      </div>
-    </header>
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+      <div class="container">
+        <!-- (a) Logo / brand -->
+        <a class="navbar-brand fw-bold" href="#">EpiShop</a>
 
-    <hero class="bg-light py5">
-      <div class="container text-center">
-        <h2 class="fs-1 fw-bold mb-3">Saldi di primavera</h2>
-        <p class="fs-5 text-muted mb-4">
-          Scopri le offerte sui prodotti in evidenza, fino al 50% di sconto
-        </p>
-        <a
-          class="d-inline-block bg-primary text-white text-decoration-none py-2 px-4 rounded"
-          >Vedi i prodotti</a
+        <!-- (b) Bottone hamburger (visibile solo su schermi piccoli) -->
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav-menu"
         >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- (c) Menu collassabile -->
+
+        <div class="collapse navbar-collapse" id="nav-menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Prodotti</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Offerte</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
+          </ul>
+        </div>
       </div>
-    </hero>
+    </nav>
+
+    <div
+      id="hero"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="3500"
+    >
+      <div class="carousel-inner">
+        <div
+          class="carousel-item active bg-primary text-white text-center py-5"
+        >
+          <div class="container">
+            <h2 class="fs-1 fw-bold mb-2">Benvenuto su EpiShop</h2>
+            <p class="fs-5 m-0">Le migliori offerte della settimana</p>
+          </div>
+        </div>
+
+        <div class="carousel-item bg-success text-white text-center py-5">
+          <div class="container">
+            <h2 class="fs-1 fw-bold mb-2">SUPER OFFERTE</h2>
+            <p class="fs-5 m-0">SIAMO INCLUSIVI</p>
+          </div>
+        </div>
+
+        <div class="carousel-item bg-dark text-white text-center py-5">
+          <div class="container">
+            <h2 class="fs-1 fw-bold mb-2">SIIIIII</h2>
+            <p class="fs-5 m-0">SIIIII</p>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#hero"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#hero"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
     <!-- Hero: titolo grande, sottotitolo, bottone CTA. Usa container + text-center + classi utility -->
 
     <main class="container my-4 flex-grow-1">
@@ -59,62 +106,104 @@
             </h2>
 
             <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-              <div class="border rounded p-3 bg-white shadow-sm">
-                <div
-                  class="bg-secondary mb-2 rounded"
-                  style="height: 160px"
-                ></div>
-                <div>
-                  <h3 class="fs-5 fw-bold m-0">Scarpe Gay</h3>
-                  <p class="text-muted m-0">Mai abbastanza $</p>
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/574bec3527d4bdfe229ea099/1560306513893-YNZ14W08IBG640OH87IM/Titolo.jpg?format=1000w"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Scarpe</h3>
+                  <p class="card-text text-muded">Mai abbastanza $</p>
+                  <p class="fw-bold fs-5 m-0">50$</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#prodotto-1">Dettagli</button>
                 </div>
               </div>
             </article>
 
-            <article class="col-12 col-sm-6 col-xl-4 mb-3 col-xxl-3">
-              <div class="border rounded p-3 bg-white shadow-sm">
-                <div
-                  class="bg-secondary mb-2 rounded"
-                  style="height: 160px"
-                ></div>
-                <div>
-                  <h3 class="fs-5 fw-bold m-0">Cappotto Gay</h3>
-                  <p class="text-muted m-0">Mai abbastanza $</p>
+            <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/574bec3527d4bdfe229ea099/1560306513893-YNZ14W08IBG640OH87IM/Titolo.jpg?format=1000w"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Scarpe</h3>
+                  <p class="card-text text-muded">Mai abbastanza $</p>
+                  <p class="fw-bold fs-5 m-0">50$</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#prodotto-1">Dettagli</button>
                 </div>
               </div>
             </article>
 
-            <article class="col-12 col-sm-6 col-xl-4 mb-3 col-xxl-3">
-              <div class="border rounded p-3 bg-white shadow-sm">
-                <div
-                  class="bg-secondary mb-2 rounded"
-                  style="height: 160px"
-                ></div>
-                <div>
-                  <h3 class="fs-5 fw-bold m-0">Panraloni Gay</h3>
-                  <p class="text-muted m-0">Mai abbastanza $</p>
+            <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/574bec3527d4bdfe229ea099/1560306513893-YNZ14W08IBG640OH87IM/Titolo.jpg?format=1000w"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Scarpe</h3>
+                  <p class="card-text text-muded">Mai abbastanza $</p>
+                  <p class="fw-bold fs-5 m-0">50$</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#prodotto-1">Dettagli</button>
                 </div>
               </div>
             </article>
 
-            <article class="col-12 col-sm-6 col-xl-4 mb-3 col-xxl-3">
-              <div class="border rounded p-3 bg-white shadow-sm">
-                <div
-                  class="bg-secondary mb-2 rounded"
-                  style="height: 160px"
-                ></div>
-                <div>
-                  <h3 class="fs-5 fw-bold m-0">Cuffia Gay</h3>
-                  <p class="text-muted m-0">Mai abbastanza $</p>
+            <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/574bec3527d4bdfe229ea099/1560306513893-YNZ14W08IBG640OH87IM/Titolo.jpg?format=1000w"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Scarpe</h3>
+                  <p class="card-text text-muded">Mai abbastanza $</p>
+                  <p class="fw-bold fs-5 m-0">50$</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#prodotto-1">Dettagli</button>
                 </div>
               </div>
             </article>
+
+           
           </div>
 
           <!-- Griglia prodotti responsive (1 / 2 / 3 / 4 per riga in base al breakpoint) -->
         </section>
       </div>
     </main>
+
+   <div class="modal fade" id="prodotto-1" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">scarpe scarpe</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="scarpe">
+        <p>descrizione</p>
+        <p class="fw-bold fs-4 m-0">60$</p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+        <button class="btn btn-success">Aggiungi al carrello</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
     <footer class="bg-dark text-white py-4 mt-5">
       <div class="container text-center">
@@ -123,4 +212,5 @@
       <!-- Footer scuro centrato con copyright -->
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>
