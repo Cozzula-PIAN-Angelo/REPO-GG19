@@ -93,8 +93,37 @@
       </button>
     </div>
     <!-- Hero: titolo grande, sottotitolo, bottone CTA. Usa container + text-center + classi utility -->
-
     <main class="container my-4 flex-grow-1">
+      <div id="filtri" class="mb-4">
+        <button
+          type="button"
+          class="btn btn-outline-primary me-2 mb-2 active"
+          data-categoria="tutti"
+        >
+          Tutti
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary me-2 mb-2"
+          data-categoria="scarpe"
+        >
+          Scarpe
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary me-2 mb-2"
+          data-categoria="accessori"
+        >
+          Accessori
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary me-2 mb-2"
+          data-categoria="abbigliamento"
+        >
+          Abbigliamento
+        </button>
+      </div>
       <div class="row">
         <aside class="col-lg-3 d-none d-lg-block">
           <div class="bg-light p-3 rounded border">
@@ -113,101 +142,7 @@
               Prodotti in evidenza
             </h2>
 
-            <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-              <div class="card h-100 shadow-sm">
-                <img
-                  src="https://images.squarespace-cdn.com/content/v1/574bec3527d4bdfe229ea099/1560306513893-YNZ14W08IBG640OH87IM/Titolo.jpg?format=1000w"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Scarpe</h5>
-                  <p class="card-text text-muted">Mai abbastanza $</p>
-                  <p class="fw-bold fs-5 m-0">50$</p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                  <button
-                    type="button"
-                    class="btn btn-primary w-100"
-                    data-bs-toggle="modal"
-                    data-bs-target="#prodotto-1"
-                  >
-                    Dettagli
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-              <div class="card h-100 shadow-sm">
-                <img
-                  src="https://images.squarespace-cdn.com/content/v1/574bec3527d4bdfe229ea099/1560306513893-YNZ14W08IBG640OH87IM/Titolo.jpg?format=1000w"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Scarpe</h5>
-                  <p class="card-text text-muted">Mai abbastanza $</p>
-                  <p class="fw-bold fs-5 m-0">50$</p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                  <button
-                    type="button"
-                    class="btn btn-primary w-100"
-                    data-bs-toggle="modal"
-                    data-bs-target="#prodotto-1"
-                  >
-                    Dettagli
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-              <div class="card h-100 shadow-sm">
-                <img
-                  src="https://images.squarespace-cdn.com/content/v1/574bec3527d4bdfe229ea099/1560306513893-YNZ14W08IBG640OH87IM/Titolo.jpg?format=1000w"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Scarpe</h5>
-                  <p class="card-text text-muted">Mai abbastanza $</p>
-                  <p class="fw-bold fs-5 m-0">50$</p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                  <button
-                    type="button"
-                    class="btn btn-primary w-100"
-                    data-bs-toggle="modal"
-                    data-bs-target="#prodotto-1"
-                  >
-                    Dettagli
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-              <div class="card h-100 shadow-sm">
-                <img
-                  src="https://images.squarespace-cdn.com/content/v1/574bec3527d4bdfe229ea099/1560306513893-YNZ14W08IBG640OH87IM/Titolo.jpg?format=1000w"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Scarpe</h5>
-                  <p class="card-text text-muted">Mai abbastanza $</p>
-                  <p class="fw-bold fs-5 m-0">50$</p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                  <button
-                    type="button"
-                    class="btn btn-primary w-100"
-                    data-bs-toggle="modal"
-                    data-bs-target="#prodotto-1"
-                  >
-                    Dettagli
-                  </button>
-                </div>
-              </div>
-            </article>
+            <article id="contenitore-prodotti" class="row"></article>
           </div>
 
           <!-- Griglia prodotti responsive (1 / 2 / 3 / 4 per riga in base al breakpoint) -->
@@ -219,7 +154,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">scarpe scarpe</h5>
+            <h5 class="modal-title" id="modale-titolo">scarpe scarpe</h5>
             <button class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
@@ -230,7 +165,7 @@
               alt="scarpe"
             />
             <p>descrizione</p>
-            <p class="fw-bold fs-4 m-0">60$</p>
+            <p class="fw-bold fs-4 m-0" id="modale-prezzo">60$</p>
           </div>
 
           <div class="modal-footer">
